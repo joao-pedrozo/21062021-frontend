@@ -1,0 +1,15 @@
+table {
+  margin-top: 16px;
+  width: 100%;
+  text-align: center;
+}
+
+mat-icon {
+  margin-right: 8px;
+}
+
+.button-add-doctor {
+  background: #1c1b1b;
+  color: #fff;
+  padding: 10px;
+}
