@@ -9,7 +9,8 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./listar.component.css'],
 })
 export class ListarComponent implements OnInit {
-  medicos: Medico[] = [];
+  medicos!: MatTableDataSource<Medico>;
+  teste: Medico[] = [];
   displayedColumns: string[] = [
     'id',
     'nome',
@@ -22,7 +23,9 @@ export class ListarComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.listar().subscribe((medicos) => {
-      this.medicos = medicos;
+      this.medicos = new MatTableDataSource<Medico>(medicos);
+      this.teste = medicos;
+      console.log(this.teste);
     });
   }
 }

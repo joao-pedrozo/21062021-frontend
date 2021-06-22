@@ -9,6 +9,11 @@ const routes: Routes = [
     path: '',
     component: ListarComponent,
   },
+  // {
+  //   //Rota para cadastrar os ciclos de pagamento
+  //   path : 'ciclo/cadastrar',
+  //   component: CadastrarComponent
+  // }
 ];
 
 @NgModule({

@@ -40,6 +40,8 @@ import { ListarComponent } from './components/views/listar/listar.component';
     MatGridListModule,
     MatSnackBarModule,
     MatSelectModule,
+    BrowserModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

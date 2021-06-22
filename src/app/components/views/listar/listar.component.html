@@ -7,7 +7,7 @@
   Novo médico
 </a>
 
-<table>
+<!-- <table>
   <thead>
     <tr>
       <th>#</th>
@@ -36,4 +36,36 @@
       </td>
     </tr>
   </tbody>
+</table> -->
+
+<table mat-table [dataSource]="medicos" class="mat-elevation-z8">
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>#</th>
+    <td mat-cell *matCellDef="let i = index">{{ teste[i]._id }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="nome">
+    <th mat-header-cell *matHeaderCellDef>Nome</th>
+    <td mat-cell *matCellDef="let i = index">{{ teste[i].nome }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="crm">
+    <th mat-header-cell *matHeaderCellDef>CRM</th>
+    <td mat-cell *matCellDef="let i = index">{{ teste[i].crm }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="especialidade">
+    <th mat-header-cell *matHeaderCellDef>Criado em</th>
+    <td mat-cell *matCellDef="let i = index">{{ teste[i].especialidade }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="criadoEm">
+    <th mat-header-cell *matHeaderCellDef>Criado em</th>
+    <td mat-cell *matCellDef="let i = index">
+      {{ teste[i].criadoEm | date: "dd/MM/yyyy HH:mm:ss" }}
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 </table>
